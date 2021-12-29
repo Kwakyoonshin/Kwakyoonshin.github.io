@@ -1,30 +1,21 @@
 ---
 title: "Structural Deep Network Embedding"
 categories:
-  - aciform
+  - paper review
 classes: wide
 excerpt: "A page with `classes: wide` set to expand the main content's width."
 tags: 
-  - review
   - embedding
   - graph
 ---
-
-When using `layout: single` add the following front matter to a page or post to widen the main content:
-
-```yaml
-classes: wide
-```
-
-# Structural Deep Network Embedding
 
 ## Abstract
 
 how to find a method that is able to effectively capture the highly non-linear network structure and preserve the global and local structure is an open yet important problem.
 
-non-linear한 구조를 파악하고, global과 local한 구조를 보존할 수 있는 문제는 아직 해결되지 않았다.
+non-linear한 구조를 파악하고, global과 local한 구조를 보존할 수 있는 문제는 아직 해결되지 않았습니다. 
 
-그에 대한 방법으로 SDNE를 제안한다.
+그에 대한 방법으로 Structural Deep Network Embedding를 제안한다.
 
 1. semi-supervised model 사용 
 
@@ -32,35 +23,41 @@ non-linear한 구조를 파악하고, global과 local한 구조를 보존할 수
 
 2. exploit the first-order and second-order proximity jointly to preserve the network structure
 
+   여기서 first-order는 pairwise proximity between vertexes를 뜻하고, second-order proximity는 between a pair of vertexes describes the proximity of the pair’s neighborhood structure를 뜻합니다. 
+   
    
 
 ## 1. Introduction
 
-- networks는 어디나 있다 
+- networks는 어디나 있습니다. Twitter의 추천 시스템 등...
 
 - One of the fundamental problems is how to learn useful network representations.
 
-- Great challenges
+- Great challenges는 다음과 같은 것들이 있습니다.
 
-  - High non-linearity 
-  - Structure-preserving 
-  - Sparsity 
+  - High non-linearity: 
+  - Structure-preserving: 
+  - Sparsity: 
 
-- 이런 문제를 해결하기 위해 제안된 방법론들 
+- 이런 문제를 해결하기 위해 제안된 방법론들은 다음과 같이 있습니다.
 
   - IsoMAP
 
     > **ISOMAP** 은 manifold 에서의 점들 간의 거리를 nearest neighbor graph 에서의 점들 간의 최단 경로로 정의합니다. 그림 (b) 처럼 표면을 따라 이동하는 거리로 두 점 사이의 거리를 정의합니다. 그리고 이 정보를 보존하는 2 차원 임베딩 공간을 학습합니다.
+    >
+    > https://lovit.github.io/nlp/representation/2018/09/28/mds_isomap_lle/ 다음 김현중 교수님의 블로그를 인용했습니다.
+    >
+    > 여기 블로그에 더 자세히 나옵니다. 
 
   - Laplacian Eigenmaps 
 
     > SDNE에서도 등장하는 해당 임베딩은, Edge weigh가 높을 수록 두 노드간의 거리가 가까워질 수 있는 것에 집중한 방법론입입니다. Normalized laplacian matrix를 기반으로 계산되며 아래 수식을 최소화하는 방향으로 학습하게 됩니다.
+    >
+    > https://junklee.tistory.com/113 다음 생각정리 블로그 참조 
 
   - Kernel
 
   하지만 모든 모델들은 피상적인 모델(shallow model)들이었고 cannot capture the highly non-linear structure well
-
-  
 
 - In order to capture the highly non-linear structure well, in this paper we propose a new deep model to learn vertex representations for networks
 
@@ -175,13 +172,13 @@ Before introducing the loss functions, we define some of the terms and notations
 
 
 
-
-
 ## ? 모르는거 
 
 >  exploit the first-order and second-order proximity 
 
 > The first-order proximity
+>
+> The second-order proximity
 
 
 
@@ -199,3 +196,10 @@ https://towardsdatascience.com/graph-embeddings-the-summary-cc6075aba007
 >
 > **skip-gram 모델 훈련** . 그래프는 문서와 유사합니다. 문서는 단어의 집합이므로 그래프는 하위 그래프의 집합입니다. 이 단계에서 skip-gram 모델이 학습됩니다. 입력에 대한 그래프에 존재하는 하위 그래프의 예측 확률을 최대화하도록 훈련됩니다. 
 
+
+
+참조 자료 
+
+- https://lovit.github.io/nlp/representation/2018/09/28/mds_isomap_lle/
+
+- https://junklee.tistory.com/113 

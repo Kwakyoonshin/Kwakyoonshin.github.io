@@ -18,15 +18,15 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "ko-KR"
 title                    : "무제"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "untitled"
 name                     : "Yoonshin"
 description              : "논문, python, 잡다한 것을 기록하는 공간"
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      :  "https://Kwakyoonshin.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "https://github.com/Kwakyoonshin/kwakyoonshin.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "untitled"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -103,8 +103,8 @@ analytics:
 # Site Author
 author:
   name             : "Yoonshin"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  avatar           : "image/profile/2021me.jpg"
+  bio              : ""
   location         : "Somewhere"
   email            :
   links:
