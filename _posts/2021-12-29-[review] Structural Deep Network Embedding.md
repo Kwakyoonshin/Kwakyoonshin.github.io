@@ -38,11 +38,11 @@ non-linear한 구조를 파악하고, global과 local한 구조를 보존할 수
 
 - Great challenges
 
-  "image/profile/2021me.jpg"
-
   
 
-  ![슬라이드5](C:\Users\JHLee\Desktop\gitblog\Kwakyoonshin.github.io\image\review_SDNE\슬라이드5.JPG)
+  ![슬라이드](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C11.JPG)
+
+  
 
   - **High non-linearity:** network는 근본적으로 High non-linearity입니다. 이를 포착할 수 있는 모델을 디자인하는 것은 어렵습니다.  
 
