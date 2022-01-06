@@ -36,21 +36,15 @@ non-linear한 구조를 파악하고, global과 local한 구조를 보존할 수
 
   
 
+![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C22.JPG)
+
 - Great challenges
 
-  
-
-  ![슬라이드](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C11.JPG)
-
-  
-
   - **High non-linearity:** network는 근본적으로 High non-linearity입니다. 이를 포착할 수 있는 모델을 디자인하는 것은 어렵습니다.  
-
   - **Structure-preserving**: network는  복잡합니다. 그래서  Structure를 보존하는 것이 필요합니다. vertexd의 유사도는 local과 global에 양쪽에 의존합니다. 이를 동시에 보존한다는 것은 어려운 문제입니다.
-
   - **Sparsity:**  많은 현실의 graph는 Sparsity합니다. 그래서 성능이 안 나오는 경우가 많습니다. 
 
-    
+  
 
 - 이런 문제를 해결하기 위해 제안된 기존의 방법론들은 다음과 같은 것들이 있습니다. 이는 Experiments에서 baseline algorithm으로서 비교해줍니다. 간단히 설명하면 다음과 같습니다. 
 
@@ -140,7 +134,9 @@ Local Linear Embedding(LLE)
 
 **Network Embedding aims to map the graphs data into a low dimensional latent space** 
 
-- DEFINITION 1. (Graph) A graph is denoted as G = (V, E), where V = {v1, ..., vn} represents n vertexes and E = {ei,j} n i,j=1 represents the edges. Each edge ei,j is associated with a weight si,j ≥ 0 1 . For vi and vj not linked by an edge, si,j = 0. Otherwise, for unweighted graph si,j = 1 and for weighted graph, si,j > 0.
+DEFINITION 1. (Graph) A graph is denoted as G = (V, E), where V = {v1, ..., vn} represents n vertexes and E = {ei,j} n i,j=1 represents the edges. Each edge ei,j is associated with a weight i,j ≥ 0 1 . For vi and vj not linked by an edge, si,j = 0. Otherwise, for unweighted graph si,j = 1 and for weighted graph, si,j > 0.
+
+
 
 그래프는 꼭지점 V와 edges로 표기된다. 연결된 것은 ei >0 이며 연결되지 않은 것은 0이다. unweighted graph의 경우 s는 0보다 크고, weighted graph의 경우  s는 1이다. 
 
@@ -150,7 +146,9 @@ Network embedding aims to map the graph data into a low dimensional latent space
 
 
 
-- Definition 2. (First-Order Proximity) The first-order proximity describes the pairwise proximity between vertexes. For any pair of vertexes, if si,j > 0, there exists positive first-order proximity between vi and vj . Otherwise, the first-order proximity between vi and vj is 0
+DEFINITION 2. (First-Order Proximity) The first-order proximity describes the pairwise proximity between vertexes. For any pair of vertexes, if si,j > 0, there exists positive first-order proximity between vi and vj . Otherwise, the first-order proximity between vi and vj is 0.
+
+
 
 vertexes간의  pairwise proximity(쌍별 유사도)가 first-order proximity이다. 
 
@@ -162,7 +160,9 @@ si,j가 0 이상이면 positive first-order proximity가 존재한다. 만약 0�
 
 
 
-- Definition 3. (Second-Order Proximity) The second-order proximity between a pair of vertexes describes the proximity of the pair’s neighborhood structure. Let Nu = {su,1, ..., su,|V |} denote the first-order proximity between vu and other vertexes. Then, secondorder proximity is determined by the similarity of Nu and Nv.
+DEFINITION 3. (Second-Order Proximity) The second-order proximity between a pair of vertexes describes the proximity of the pair’s neighborhood structure. Let Nu = {su,1, ..., su,|V |} denote the first-order proximity between vu and other vertexes. Then, secondorder proximity is determined by the similarity of Nu and Nv.
+
+
 
 2차 근접성은 vertexes describes the proximity of the pair’s neighborhood structure이다. 간단힌 말하면 인접 행렬에 의해서 계산된다는 것을 의미한다. 1차 근접성과 2차 근접성을 이용하여 구조를 보존하고 이들을 통합하는 임베딩을 찾습니다. 
 
@@ -174,11 +174,11 @@ Nu의 유사도에 의해서 2차 근접성이 결정된다.
 
 
 
-- Definition 4. (Network Embedding) Given a graph denoted as G = (V, E), network embedding aims to learn a mapping function f : vi 7−→ yi ∈ R d , where d  |V |. The objective of the function is to make the similarity between yi and yj explicitly preserve the first-order and second-order proximity of vi and vj .
+DEFINITION 4. (Network Embedding) Given a graph denoted as G = (V, E), network embedding aims to learn a mapping function f : vi 7−→ yi ∈ R d , where d  |V |. The objective of the function is to make the similarity between yi and yj explicitly preserve the first-order and second-order proximity of vi and vj .
 
-최종적으로 network Embedding 문제를 다음과 같이 정의하였습니다. 
 
-차원을 d로 축소하는 과정에 있어서 the first-order and second-order proximity 보존하면서, yi와 yj가 같게끔 만드는 것이 이 문제의 목표(objective function) 입니다. 
+
+최종적으로 network Embedding 문제를 다음과 같이 정의하였습니다. 차원을 d로 축소하는 과정에 있어서 the first-order and second-order proximity 보존하면서, yi와 yj가 같게끔 만드는 것이 이 논문의 목표(objective function) 입니다. 
 
 
 
@@ -188,19 +188,29 @@ Nu의 유사도에 의해서 2차 근접성이 결정된다.
 
 이 페이퍼에서는 다음과 같은 semi-supervised deep model을 제시합니다.
 
-![슬라이드8](C:\Users\JHLee\Desktop\gitblog\Kwakyoonshin.github.io\image\review_SDNE\슬라이드8.JPG)
+
+
+![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C22.JPG)
+
+
 
 아래 그림과 같이 빨간색과 파란색, Unsupervised 부분과 Supervised 부분으로 구성되어 있습니다.
 
 
 
-![슬라이드9](C:\Users\JHLee\Desktop\gitblog\Kwakyoonshin.github.io\image\review_SDNE\슬라이드9.JPG)
+![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C22.JPG)
+
+
 
 Unsupervised 부분은 traditional autoencoder의 형태를 확장한 모델입니다. encoder와 decoder로 구성되어 있으며 encoder은 non-linear function로 되어 있습니다. Unsupervised 부분에서는 Vertex의 인접행렬 한 row가 들어가게 됩니다. 그리고 autoencoder를 통해서 latent vector를 추출합니다. i,j vertex에서 이를 수행합니다. 
 
 
 
-![슬라이드9](C:\Users\JHLee\Desktop\gitblog\Kwakyoonshin.github.io\image\review_SDNE\슬라이드9.JPG)
+
+
+![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C22.JPG)
+
+
 
 추출된 latent representation들간의 관계를 비교해서 Laplacian Eigenmaps을 진행합니다.
 
@@ -214,7 +224,7 @@ Unsupervised 부분은 traditional autoencoder의 형태를 확장한 모델입�
 
 최종적인 Loss Function은 first-order and second-order proximity에 대한 Loss function과 regularizer term으로 구성됩니다.
 
-![슬라이드12](C:\Users\JHLee\Desktop\gitblog\Kwakyoonshin.github.io\image\review_SDNE\슬라이드12.JPG)
+![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C22.JPG)
 
 
 
@@ -245,7 +255,7 @@ Unsupervised 부분은 traditional autoencoder의 형태를 확장한 모델입�
 
 다음과 같은 기존의 Representation Algorithm과 비교 실험을 진행했습니다. 
 
-![슬라이드17](C:\Users\JHLee\Desktop\gitblog\Kwakyoonshin.github.io\image\review_SDNE\슬라이드17.JPG)
+![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C22.JPG)
 
 
 
@@ -287,7 +297,7 @@ multi-label classification task에서 사용한 평가 지표 입니다.
 
 
 
-![슬라이드19](C:\Users\JHLee\Desktop\gitblog\Kwakyoonshin.github.io\image\review_SDNE\슬라이드19.JPG)
+![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C19.JPG)
 
 
 
@@ -305,31 +315,29 @@ multi-label classification task에서 사용한 평가 지표 입니다.
 
 - Network Reconstruction
 
-![슬라이드20](C:\Users\JHLee\Desktop\gitblog\Kwakyoonshin.github.io\image\review_SDNE\슬라이드20.JPG)
+![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C20.JPG)
 
 
 
 - Multi-label Classification
 
-![슬라이드20](C:\Users\JHLee\Desktop\gitblog\Kwakyoonshin.github.io\image\review_SDNE\슬라이드20.JPG)
+![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C20.JPG)
 
 
 
-![슬라이드22](C:\Users\JHLee\Desktop\gitblog\Kwakyoonshin.github.io\image\review_SDNE\슬라이드22.JPG)
+![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C22.JPG)
 
 
 
 - Link Prediction
 
-![슬라이드23](C:\Users\JHLee\Desktop\gitblog\Kwakyoonshin.github.io\image\review_SDNE\슬라이드23.JPG)
-
-![슬라이드23](C:\Users\JHLee\Desktop\gitblog\Kwakyoonshin.github.io\image\review_SDNE\슬라이드23.JPG)
+![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C23.JPG)
 
 
 
 - Visualization
 
-![슬라이드25](C:\Users\JHLee\Desktop\gitblog\Kwakyoonshin.github.io\image\review_SDNE\슬라이드25.JPG)
+![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C25.JPG)
 
 
 
@@ -337,7 +345,7 @@ multi-label classification task에서 사용한 평가 지표 입니다.
 
 Loss function의 parameter 조정에 대해서 실험을 진행하였습니다. 
 
-![슬라이드26](C:\Users\JHLee\Desktop\gitblog\Kwakyoonshin.github.io\image\review_SDNE\슬라이드26.JPG)
+![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C26.JPG)
 
 
 
@@ -351,11 +359,7 @@ Dataset을 활용하여, Reconstruction, Classification 등의 Task 진행했을
 
 SDNE가 다른 알고리즘보다 **Sparsity**에 대해서 **Robust**한 것을 실험을 통해서 확인했습니다. 
 
-
-
-**하지만** 데이터에 따라서 **parameter**에 대한 튜닝이 필요한 알고리즘
-
-
+추후 연구로서 기존의 연결되어 있지 않은 vertex 연구를 진행할 것이라고 이야기합니다.  
 
 
 
