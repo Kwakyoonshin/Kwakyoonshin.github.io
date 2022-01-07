@@ -13,3 +13,5 @@ tags:
 
 ![test](./assets/review_SDNE/[논문리뷰] SDNE/슬라이드1.jpg)
 
+![test](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드1.jpg)
+
