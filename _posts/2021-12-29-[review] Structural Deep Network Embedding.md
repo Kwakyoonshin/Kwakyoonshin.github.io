@@ -9,7 +9,7 @@ tags:
   - graph
 ---
 
-![논문제목](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드1.jpg)
+![논문제목](./assets/review_SDNE/[논문리뷰] SDNE/슬라이드1.jpg)
 
 ## Abstract
 
