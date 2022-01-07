@@ -9,6 +9,8 @@ tags:
   - graph
 ---
 
+![논문제목](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드1.jpg)
+
 ## Abstract
 
 how to find a method that is able to effectively capture the highly non-linear network structure and preserve the global and local structure is an open yet important problem.
@@ -18,14 +20,11 @@ non-linear한 구조를 파악하고, global과 local한 구조를 보존할 수
 그에 대한 방법으로 SDNE를 제안했습니다. 
 
 1. semi-supervised model 사용했습니다. : multiple layers of non-linear functions을 사용하였습니다. 
-
 2. exploit the first-order and second-order proximity jointly to preserve the network structure:  first-order과 second-order proximity 결합하여 network의 structure를 보존하고자 했습니다. 
 
-   
 
-```
-![Foo](/image/review_SDNE/[논문리뷰] SDNE/슬라이드1.JPG)
-```
+
+---
 
 
 
@@ -149,8 +148,6 @@ Network embedding aims to map the graph data into a low dimensional latent space
 
 DEFINITION 2. (First-Order Proximity) The first-order proximity describes the pairwise proximity between vertexes. For any pair of vertexes, if si,j > 0, there exists positive first-order proximity between vi and vj . Otherwise, the first-order proximity between vi and vj is 0.
 
-
-
 vertexes간의  pairwise proximity(쌍별 유사도)가 first-order proximity이다. 
 
 si,j가 0 이상이면 positive first-order proximity가 존재한다. 만약 0이라면 존재하지 않는다. 
@@ -169,15 +166,11 @@ DEFINITION 3. (Second-Order Proximity) The second-order proximity between a pai
 
 두 정점은 많은 공통 이웃을 공유할수록 유사할 것이다라는 가정으로 계산됩니다.
 
-Nu의 유사도에 의해서 2차 근접성이 결정된다. 
-
-따라서 2차 근접성을 도입하여 글로벌 네트워크 구조를 특성화하고 희소성 문제를 완화할 수 있습니다.
+Nu의 유사도에 의해서 2차 근접성이 결정됩니다. 따라서 2차 근접성을 도입하여 글로벌 네트워크 구조를 특성화하고 희소성 문제를 완화할 수 있습니다.
 
 
 
 DEFINITION 4. (Network Embedding) Given a graph denoted as G = (V, E), network embedding aims to learn a mapping function f : vi 7 → yi ∈ R d , where d  |V |. The objective of the function is to make the similarity between yi and yj explicitly preserve the first-order and second-order proximity of vi and vj .
-
-
 
 최종적으로 network Embedding 문제를 다음과 같이 정의하였습니다. 차원을 d로 축소하는 과정에 있어서 the first-order and second-order proximity 보존하면서, yi와 yj가 같게끔 만드는 것이 이 논문의 목표(objective function) 입니다. 
 
@@ -189,17 +182,13 @@ DEFINITION 4. (Network Embedding) Given a graph denoted as G = (V, E), network e
 
 이 페이퍼에서는 다음과 같은 semi-supervised deep model을 제시합니다.
 
-
-
-
-
-
-
 아래 그림과 같이 빨간색과 파란색, Unsupervised 부분과 Supervised 부분으로 구성되어 있습니다.
 
+![Framework](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드8.jpg)
 
 
 
+![Unsupervised component](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드9.jpg)
 
 Unsupervised 부분은 traditional autoencoder의 형태를 확장한 모델입니다. encoder와 decoder로 구성되어 있으며 encoder은 non-linear function로 되어 있습니다. Unsupervised 부분에서는 Vertex의 인접행렬 한 row가 들어가게 됩니다. 그리고 autoencoder를 통해서 latent vector를 추출합니다. i,j vertex에서 이를 수행합니다. 
 
@@ -207,9 +196,7 @@ Unsupervised 부분은 traditional autoencoder의 형태를 확장한 모델입�
 
 
 
-
-
-
+![Supervised component](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드9.jpg)
 
 추출된 latent representation들간의 관계를 비교해서 Laplacian Eigenmaps을 진행합니다.
 
@@ -223,9 +210,19 @@ Unsupervised 부분은 traditional autoencoder의 형태를 확장한 모델입�
 
 최종적인 Loss Function은 first-order and second-order proximity에 대한 Loss function과 regularizer term으로 구성됩니다.
 
+![Loss Functions](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드12.jpg)
 
 
 
+### Optimization 
+
+![Optimization](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드13.jpg)
+
+![Optimization](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드14.jpg)
+
+### Algorithm 
+
+![Algorithm](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드15.jpg)
 
 ---
 
@@ -254,7 +251,7 @@ Unsupervised 부분은 traditional autoencoder의 형태를 확장한 모델입�
 
 다음과 같은 기존의 Representation Algorithm과 비교 실험을 진행했습니다. 
 
-
+![기존의 Representation Algorithm](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드17.jpg)
 
 - DeepWalk
 
@@ -280,7 +277,7 @@ Unsupervised 부분은 traditional autoencoder의 형태를 확장한 모델입�
 
 ### Evaluation Metrics
 
-
+![Evaluation Metrics](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드19.jpg)
 
 reconstruction and link prediction에서 사용한 평가 지표 입니다. 
 
@@ -300,7 +297,7 @@ multi-label classification task에서 사용한 평가 지표 입니다.
 
 서로 다른 algorithms에 대한 비교 실험을 위해 parameter 설정을 어떻게 했는지를 이야기해줍니다. 
 
-
+![Parameter Settings](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드18.jpg)
 
 
 
@@ -310,27 +307,31 @@ multi-label classification task에서 사용한 평가 지표 입니다.
 
 - Network Reconstruction
 
-
+![Network Reconstruction](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드20.jpg)
 
 - Multi-label Classification
 
+![Multi-label Classification](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드21.jpg)
 
-
-![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C22.JPG)
-
-
+![Multi-label Classification](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드22.jpg)
 
 - Link Prediction
 
+![Link Prediction](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드23.jpg)
 
+![Link Prediction](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드24.jpg)
 
 - Visualization
 
-
+![Visualization](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드25.jpg)
 
 ### Parameter Sensitivity
 
 Loss function의 parameter 조정에 대해서 실험을 진행하였습니다. 
+
+![Parameter Sensitivity](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드26.jpg)
+
+임베딩 차원에 대해서 크게 영향을 받지 않지만 다른 파라미터는 영향을 크게 받는 것을 확인할 수 있습니다. 
 
 
 
