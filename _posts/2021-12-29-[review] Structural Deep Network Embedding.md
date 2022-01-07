@@ -3,7 +3,7 @@ title: "Structural Deep Network Embedding"
 categories:
   - paper review
 classes: wide
-excerpt: "A page with `classes: wide` set to expand the main content's width."
+excerpt: "SDNE reivew"
 tags: 
   - embedding
   - graph
@@ -18,11 +18,14 @@ non-linear한 구조를 파악하고, global과 local한 구조를 보존할 수
 그에 대한 방법으로 SDNE를 제안했습니다. 
 
 1. semi-supervised model 사용했습니다. : multiple layers of non-linear functions을 사용하였습니다. 
+
 2. exploit the first-order and second-order proximity jointly to preserve the network structure:  first-order과 second-order proximity 결합하여 network의 structure를 보존하고자 했습니다. 
 
+   
 
-
----
+```
+![Foo](/image/review_SDNE/[논문리뷰] SDNE/슬라이드1.JPG)
+```
 
 
 
@@ -35,8 +38,6 @@ non-linear한 구조를 파악하고, global과 local한 구조를 보존할 수
   가장 중요한 문제는 network를 어떻게 표현하는가입니다. network를 표현하는데 다음과 같은 중요한 문제가 있습니다. 
 
   
-
-![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C22.JPG)
 
 - Great challenges
 
@@ -174,7 +175,7 @@ Nu의 유사도에 의해서 2차 근접성이 결정된다.
 
 
 
-DEFINITION 4. (Network Embedding) Given a graph denoted as G = (V, E), network embedding aims to learn a mapping function f : vi 7−→ yi ∈ R d , where d  |V |. The objective of the function is to make the similarity between yi and yj explicitly preserve the first-order and second-order proximity of vi and vj .
+DEFINITION 4. (Network Embedding) Given a graph denoted as G = (V, E), network embedding aims to learn a mapping function f : vi 7 → yi ∈ R d , where d  |V |. The objective of the function is to make the similarity between yi and yj explicitly preserve the first-order and second-order proximity of vi and vj .
 
 
 
@@ -190,15 +191,13 @@ DEFINITION 4. (Network Embedding) Given a graph denoted as G = (V, E), network e
 
 
 
-![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C22.JPG)
+
 
 
 
 아래 그림과 같이 빨간색과 파란색, Unsupervised 부분과 Supervised 부분으로 구성되어 있습니다.
 
 
-
-![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C22.JPG)
 
 
 
@@ -208,7 +207,7 @@ Unsupervised 부분은 traditional autoencoder의 형태를 확장한 모델입�
 
 
 
-![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C22.JPG)
+
 
 
 
@@ -224,7 +223,7 @@ Unsupervised 부분은 traditional autoencoder의 형태를 확장한 모델입�
 
 최종적인 Loss Function은 first-order and second-order proximity에 대한 Loss function과 regularizer term으로 구성됩니다.
 
-![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C22.JPG)
+
 
 
 
@@ -254,8 +253,6 @@ Unsupervised 부분은 traditional autoencoder의 형태를 확장한 모델입�
 ### Baseline Algorithms 
 
 다음과 같은 기존의 Representation Algorithm과 비교 실험을 진행했습니다. 
-
-![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C22.JPG)
 
 
 
@@ -297,8 +294,6 @@ multi-label classification task에서 사용한 평가 지표 입니다.
 
 
 
-![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C19.JPG)
-
 
 
 ### Parameter Settings
@@ -315,13 +310,9 @@ multi-label classification task에서 사용한 평가 지표 입니다.
 
 - Network Reconstruction
 
-![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C20.JPG)
-
 
 
 - Multi-label Classification
-
-![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C20.JPG)
 
 
 
@@ -331,21 +322,15 @@ multi-label classification task에서 사용한 평가 지표 입니다.
 
 - Link Prediction
 
-![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C23.JPG)
-
 
 
 - Visualization
-
-![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C25.JPG)
 
 
 
 ### Parameter Sensitivity
 
 Loss function의 parameter 조정에 대해서 실험을 진행하였습니다. 
-
-![](https://github.com/Kwakyoonshin/Kwakyoonshin.github.io/blob/main/image/review_SDNE/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C26.JPG)
 
 
 
