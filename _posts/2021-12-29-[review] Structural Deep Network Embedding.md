@@ -9,7 +9,7 @@ tags:
   - graph
 ---
 
-![논문제목](/assets/review_SDNE/%5B논문리뷰%5D%20SDNE/슬라이드1.JPG?rwq=true)
+![논문제목](/assets/review_SDNE/ppt01.JPG)
 
 ## Abstract
 
@@ -184,17 +184,17 @@ DEFINITION 4. (Network Embedding) Given a graph denoted as G = (V, E), network e
 
 아래 그림과 같이 빨간색과 파란색, Unsupervised 부분과 Supervised 부분으로 구성되어 있습니다.
 
-![Framework](/assets/review_SDNE/%5B논문리뷰%5D%20SDNE/슬라이드8.JPG?rwq=true)
+![Framework](/assets/review_SDNE/ppt08.JPG)
 
-![Unsupervised component](/assets/review_SDNE/%5B논문리뷰%5D%20SDNE/슬라이드9.JPG?rwq=true)
+
+
+![Unsupervised component](/assets/review_SDNE/ppt09.JPG)
 
 Unsupervised 부분은 traditional autoencoder의 형태를 확장한 모델입니다. encoder와 decoder로 구성되어 있으며 encoder은 non-linear function로 되어 있습니다. Unsupervised 부분에서는 Vertex의 인접행렬 한 row가 들어가게 됩니다. 그리고 autoencoder를 통해서 latent vector를 추출합니다. i,j vertex에서 이를 수행합니다. 
 
 
 
-
-
-![Supervised component](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드9.jpg)
+![Supervised component](/assets/review_SDNE/ppt10.JPG)
 
 추출된 latent representation들간의 관계를 비교해서 Laplacian Eigenmaps을 진행합니다.
 
@@ -208,19 +208,21 @@ Unsupervised 부분은 traditional autoencoder의 형태를 확장한 모델입�
 
 최종적인 Loss Function은 first-order and second-order proximity에 대한 Loss function과 regularizer term으로 구성됩니다.
 
-![Loss Functions](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드12.jpg)
+![Loss Functions](/assets/review_SDNE/ppt12.JPG)
 
 
 
 ### Optimization 
 
-![Optimization](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드13.jpg)
+![Optimization](/assets/review_SDNE/ppt13.JPG)
 
-![Optimization](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드14.jpg)
+![Optimization](/assets/review_SDNE/ppt14.JPG)
+
+
 
 ### Algorithm 
 
-![Algorithm](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드15.jpg)
+![Algorithm](/assets/review_SDNE/ppt15.JPG)
 
 ---
 
@@ -249,7 +251,7 @@ Unsupervised 부분은 traditional autoencoder의 형태를 확장한 모델입�
 
 다음과 같은 기존의 Representation Algorithm과 비교 실험을 진행했습니다. 
 
-![기존의 Representation Algorithm](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드17.jpg)
+![기존의 Representation Algorithm](/assets/review_SDNE/ppt17.JPG)
 
 - DeepWalk
 
@@ -295,7 +297,7 @@ multi-label classification task에서 사용한 평가 지표 입니다.
 
 서로 다른 algorithms에 대한 비교 실험을 위해 parameter 설정을 어떻게 했는지를 이야기해줍니다. 
 
-![Parameter Settings](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드18.jpg)
+![Parameter Settings](/assets/review_SDNE/ppt18.JPG)
 
 
 
@@ -305,29 +307,37 @@ multi-label classification task에서 사용한 평가 지표 입니다.
 
 - Network Reconstruction
 
-![Network Reconstruction](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드20.jpg)
+![Network Reconstruction](/assets/review_SDNE/ppt20.JPG)
+
+
 
 - Multi-label Classification
 
-![Multi-label Classification](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드21.jpg)
+![Multi-label Classification](/assets/review_SDNE/ppt21.JPG)
 
-![Multi-label Classification](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드22.jpg)
+![Multi-label Classification](/assets/review_SDNE/ppt22.JPG)
+
+
 
 - Link Prediction
 
-![Link Prediction](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드23.jpg)
+![Link Predictionl Classification](/assets/review_SDNE/ppt23.JPG)
 
-![Link Prediction](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드24.jpg)
+![Link Predictionl Classification](/assets/review_SDNE/ppt24.JPG)
+
+
 
 - Visualization
 
-![Visualization](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드25.jpg)
+![Visualizationl Classification](/assets/review_SDNE/ppt25.JPG)
+
+
 
 ### Parameter Sensitivity
 
 Loss function의 parameter 조정에 대해서 실험을 진행하였습니다. 
 
-![Parameter Sensitivity](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드26.jpg)
+![Parameter Sensitivityl Classification](/assets/review_SDNE/ppt26.JPG)
 
 임베딩 차원에 대해서 크게 영향을 받지 않지만 다른 파라미터는 영향을 크게 받는 것을 확인할 수 있습니다. 
 
