@@ -277,7 +277,7 @@ Unsupervised 부분은 traditional autoencoder의 형태를 확장한 모델입�
 
 ### Evaluation Metrics
 
-![Evaluation Metrics](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드19.jpg)
+![Evaluation Metrics](/assets/review_SDNE/ppt19.JPG)
 
 reconstruction and link prediction에서 사용한 평가 지표 입니다. 
 
