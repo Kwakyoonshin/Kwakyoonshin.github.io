@@ -9,7 +9,7 @@ tags:
   - graph
 ---
 
-![논문제목](./assets/review_SDNE/[논문리뷰] SDNE/슬라이드1.jpg?rwq=true)
+![논문제목](/assets/review_SDNE/%5B논문리뷰%5D%20SDNE/슬라이드1.JPG?rwq=true)
 
 ## Abstract
 
@@ -184,11 +184,9 @@ DEFINITION 4. (Network Embedding) Given a graph denoted as G = (V, E), network e
 
 아래 그림과 같이 빨간색과 파란색, Unsupervised 부분과 Supervised 부분으로 구성되어 있습니다.
 
-![Framework](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드8.jpg?rwq=true)
+![Framework](/assets/review_SDNE/%5B논문리뷰%5D%20SDNE/슬라이드8.JPG?rwq=true)
 
-
-
-![Unsupervised component](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드9.jpg)
+![Unsupervised component](/assets/review_SDNE/%5B논문리뷰%5D%20SDNE/슬라이드9.JPG?rwq=true)
 
 Unsupervised 부분은 traditional autoencoder의 형태를 확장한 모델입니다. encoder와 decoder로 구성되어 있으며 encoder은 non-linear function로 되어 있습니다. Unsupervised 부분에서는 Vertex의 인접행렬 한 row가 들어가게 됩니다. 그리고 autoencoder를 통해서 latent vector를 추출합니다. i,j vertex에서 이를 수행합니다. 
 
