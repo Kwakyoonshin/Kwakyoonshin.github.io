@@ -9,6 +9,10 @@ tags:
   - graph
 ---
 
+
+
+
+
 ![논문제목](/assets/review_SDNE/ppt01.JPG)
 
 ## Abstract
@@ -353,7 +357,7 @@ Dataset을 활용하여, Reconstruction, Classification 등의 Task 진행했을
 
 SDNE가 다른 알고리즘보다 **Sparsity**에 대해서 **Robust**한 것을 실험을 통해서 확인했습니다. 
 
-추후 연구로서 기존의 연결되어 있지 않은 vertex 연구를 진행할 것이라고 이야기합니다.  
+추후 연구로서 기존의 연결되어 있지 않은 vertex에 대한 연구를 진행할 것이라고 이야기합니다.  
 
 
 
@@ -361,7 +365,9 @@ SDNE가 다른 알고리즘보다 **Sparsity**에 대해서 **Robust**한 것을
 
 
 
-참조 자료 
+## 참조 자료 
+
+위 포스팅은 같은 랩실의 김명준 박사님의 도움을 많이 받았습니다. 
 
 - https://lovit.github.io/nlp/representation/2018/09/28/mds_isomap_lle/
 - https://junklee.tistory.com/113 
