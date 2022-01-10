@@ -15,5 +15,13 @@ tags:
 
 ![test]("/assets/review_SDNE/[논문리뷰] SDNE/슬라이드1.jpg")
 
-![test2]("image/profile/2021me.jpg")
+![test](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드1.jpg)
+
+![test2]("/image/profile/2021me.jpg")
+
+![test2]("./image/profile/2021me.jpg")
+
+
+
+"image/profile/2021me.jpg"
 
