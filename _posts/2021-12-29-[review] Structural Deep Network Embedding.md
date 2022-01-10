@@ -9,7 +9,7 @@ tags:
   - graph
 ---
 
-![논문제목](./assets/review_SDNE/[논문리뷰] SDNE/슬라이드1.jpg)
+![논문제목](./assets/review_SDNE/[논문리뷰] SDNE/슬라이드1.jpg?rwq=true)
 
 ## Abstract
 
@@ -184,7 +184,7 @@ DEFINITION 4. (Network Embedding) Given a graph denoted as G = (V, E), network e
 
 아래 그림과 같이 빨간색과 파란색, Unsupervised 부분과 Supervised 부분으로 구성되어 있습니다.
 
-![Framework](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드8.jpg)
+![Framework](/assets/review_SDNE/[논문리뷰] SDNE/슬라이드8.jpg?rwq=true)
 
 
 
