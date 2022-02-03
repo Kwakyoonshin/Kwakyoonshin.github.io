@@ -138,7 +138,9 @@ Local Linear Embedding(LLE)
 
 **Network Embedding aims to map the graphs data into a low dimensional latent space** 
 
-DEFINITION 1. (Graph) A graph is denoted as G = (V, E), where V = {v1, ..., vn} represents n vertexes and E = {ei,j} n i,j=1 represents the edges. Each edge ei,j is associated with a weight i,j ≥ 0 1 . For vi and vj not linked by an edge, si,j = 0. Otherwise, for unweighted graph si,j = 1 and for weighted graph, si,j > 0.
+DEFINITION 1. (Graph) A graph is denoted as $G = (V, E)$, where $V = {v1, ..., vn}$ represents n vertexes and $E = {ei,j} n i,j=1$ represents the edges. Each edge ei,j is associated with a weight i,j ≥ 0 1 . For vi and vj not linked by an edge, si,j = 0. Otherwise, for unweighted graph si,j = 1 and for weighted graph, si,j > 0.
+
+
 
 
 
