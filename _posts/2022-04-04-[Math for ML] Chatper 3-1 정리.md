@@ -17,6 +17,14 @@ tags:
 
 가짜 연구소에서 Mathematics for Machine Learning 스터디를 하고 있습니다. 본 글은 다음 학습한 내용을 간단하게 정리한 글입니다. 모두 한 글에 정리하고자 했으나, Chapter 3의 9. Rotations까지 한꺼번에 정리하게 되면 너무 길어져서 두 부분으로 나누어서 정리했습니다. 
 
+
+
+다음 수식과 내용은 Mathematics for Machine Learning(Deisenroth, M. P., Faisal, A. A., & Ong, C. S. (2018)에서 정리한 것입니다.
+
+
+
+
+
 # Chapter 3. Analytic Geometry
 
 지난 Chapter 2에서는 Linear Algebra에 관한 전반적인 개념에 대해서 살펴보았습니다. vector와 vector space, linear map 등에 대해서 간략히 개념을 학습해보았습니다. 3장은 vector의 길이부터 시작해서, Angles, Inner product, Orthogonality에 대해서 살펴볼 것입니다.
@@ -25,13 +33,13 @@ tags:
 
 첫번째 나오는 개념은 Norms 입니다. 간단히 설명하면 vector의 길이를 표현합니다. 시작점과 끝점이 있는 화살표의 길이를 표현한다고 생각하면 쉽습니다. 
 
-![Norm의 정의(하나 하나 쳐보고 미친 짓이란 걸 깨달았습니다) ](Chapter%203%20%201ad9f/Untitled.png)
+![Norm의 정의(하나 하나 쳐보고 미친 짓이란 걸 깨달았습니다) ](/assets/Chapter 3  1ad9fE/Untitled.png)
 
 Norm의 정의(하나 하나 쳐보고 미친 짓이란 걸 깨달았습니다) 
 
 이러한 Norm에는 대표적으로 Manhattan Norm과  Euclidean Norm이 존재합니다. 
 
-![Untitled](Chapter%203%20%201ad9f/Untitled%201.png)
+![Untitled](/assets/Chapter 3  1ad9fE/Untitled%201.png)
 
 다음 왼쪽의 그래프에 원점으로 부터 Manhattan Norm이 1인 모든 vector의 trace(자취)를 그린 그래프입니다. 오른쪽의 그림이 원점으로 부터 Euclidean Norm이 1인 모든 vector의 trace(자취)를 그린 그래프입니다. 일반적으로 왼쪽의 Euclidean Norm을 많이 사용합니다.
 
