@@ -33,13 +33,15 @@ tags:
 
 첫번째 나오는 개념은 Norms 입니다. 간단히 설명하면 vector의 길이를 표현합니다. 시작점과 끝점이 있는 화살표의 길이를 표현한다고 생각하면 쉽습니다. 
 
-![Untitled 1](\assets\Math_for_ML_Chapter3\Untitled.png)
+![](/assets/Math_for_ML_Chapter3/Untitled 1.png)
 
-Norm의 정의(하나 하나 쳐보고 미친 짓이란 걸 깨달았습니다) 
+![Norm의 정의(하나 하나 쳐보고 미친 짓이란 걸 깨달았습니다)](\assets\Math_for_ML_Chapter3\Untitled.png)
+
+
 
 이러한 Norm에는 대표적으로 Manhattan Norm과  Euclidean Norm이 존재합니다. 
 
-![Untitled 1](\assets\Math_for_ML_Chapter3\Untitled 1.png)
+![Untitled 1](/assets/Math_for_ML_Chapter3/Untitled 1.png)
 
 ![Untitled 1](\assets\Math_for_ML_Chapter3\Untitled 1.png)
 
