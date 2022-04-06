@@ -49,13 +49,13 @@ Norm의 정의(하나 하나 쳐보고 미친 짓이란 걸 깨달았습니다)
 
 우선 고등학교 때 배웠던 Dot Product를 기억해봅시다. 
 
-![Untitled](Chapter%203%20%201ad9f/Untitled%202.png)
+![Untitled](\assets\Math_for_ML_Chapter3\Untitled 2.png)
 
 사실 Dot Proudct = 내적이 아닙니다. 엄밀히 말하면 Inner Poduct의 한 형태라고 볼 수 있습니다. 
 
 Inner Product의 정의 우선에 일반적으로 두개의 vector를 하나의 real number 값으로  표현하는 것을 Lilinear mapping 이라고 하며  다음과 같은 정의를 가집니다. 
 
-![Untitled](Chapter%203%20%201ad9f/Untitled%203.png)
+![Untitled](\assets\Math_for_ML_Chapter3\Untitled 3.png)
 
 그리고 $\Omega$ 의 symmetric(대칭성)과 positive definite의 특성을 보여줍니다. 
 
@@ -64,13 +64,13 @@ Inner Product의 정의 우선에 일반적으로 두개의 vector를 하나의 
 
 그리고 General Inner Products의 경우 선형성을 띄기 때문에 다음과 같은 성질을 보입니다.
 
-![Untitled](Chapter%203%20%201ad9f/Untitled%204.png)
+![Untitled](\assets\Math_for_ML_Chapter3\Untitled 4.png)
 
 최종적으로 Vector space V에 대한 inner product는 다음과 표현됩니다. 
 
 A positive definite, symmetric한 bilinear mapping을 Vecotr space V에 대한 내적이라고 정의합니다.
 
-![Untitled](Chapter%203%20%201ad9f/Untitled%205.png)
+![Untitled](\assets\Math_for_ML_Chapter3\Untitled 5.png)
 
 ### Symmetric, Positive Definite Matrices
 
@@ -87,9 +87,9 @@ Symmetric, Positive Definite Matrices은 Inner product를  통해 정의됩니�
 
 이  Positive Definite Matrices 핵심 정의는 다음과 같습니다.
 
-![Untitled](Chapter%203%20%201ad9f/Untitled%206.png)
+![Untitled](\assets\Math_for_ML_Chapter3\Untitled 6.png)
 
-![Untitled](Chapter%203%20%201ad9f/Untitled%207.png)
+![Untitled](\assets\Math_for_ML_Chapter3\Untitled 7.png)
 
 (3.11)의 식을 따르면 Symmetric matrix A는 Symmetric, Positive Definite하다. 
 
@@ -99,7 +99,7 @@ Positive Definite Matrix 모든 positive eigenvalues을 갖는 행렬입니다.
 
 다음 식의 간단한 문제를 통해서 예시를 들어보면 
 
-![Untitled](Chapter%203%20%201ad9f/Untitled%208.png)
+![Untitled](\assets\Math_for_ML_Chapter3\Untitled 8.png)
 
 $A_1: x^TA_1x = (완전제곱꼴) > 0$  의 형태이므로 positive definite라고 할 수 있습니다.
 
@@ -109,11 +109,11 @@ $A_1: x^TA_1x = (완전제곱꼴) > 0$  의 형태이므로 positive definite라
 
 길이는 다음과 같이 Inner product로 정의됩니다.
 
-![Untitled](Chapter%203%20%201ad9f/Untitled%209.png)
+![Untitled](\assets\Math_for_ML_Chapter3\Untitled 9.png)
 
 그리고 다음과 같은 Mapping을 meric이라고 합니다
 
-![Untitled](Chapter%203%20%201ad9f/Untitled%2010.png)
+![Untitled](\assets\Math_for_ML_Chapter3\Untitled 10.png)
 
 Inner product를 통해 norm을 도출한 다는 점에서 두개는 밀접한 관련이 있습니다. 
 
@@ -123,25 +123,25 @@ Inner product를 통해 norm을 도출한 다는 점에서 두개는 밀접한 �
 
 $x \not= 0, y\not=0$ 이라면 Cauchy-Schwarz inequality에 (3.24)가 성립합니다. 
 
-![Untitled](Chapter%203%20%201ad9f/Untitled%2011.png)
+![Untitled](\assets\Math_for_ML_Chapter3\Untitled 11.png)
 
 따라서 unique  $w \in [0, \pi]$로 나타낼 수 있으며 이는 아래와 같이 표현됩니다 .
 
-![Untitled](Chapter%203%20%201ad9f/Untitled%2012.png)
+![Untitled](\assets\Math_for_ML_Chapter3\Untitled 12.png)
 
 Inner products를 통해서 Orthogonality와 Orthonormal을 정의할 수 있습니다. 
 
 vector x와 y가 Inner products가 0 일 경우 orthogonal이라고 하고, x와 y의 norm이 1이 경우 Orthonormal이라고 정의합니다.
 
-![Untitled](Chapter%203%20%201ad9f/Untitled%2013.png)
+![Untitled](\assets\Math_for_ML_Chapter3\Untitled 13.png)
 
-![Untitled](Chapter%203%20%201ad9f/Untitled%2014.png)
+![Untitled](\assets\Math_for_ML_Chapter3\Untitled 14.png)
 
 → 다음 직교성은 중요한 성질로 데이터로 생각해보면 x, y를  데이터로 가정해서 생각해보면 두 데이터의특성이 완전 독립이란 것을 의미합니다. 
 
 이 부분에서 Orthogonal Matrix를 함께 정의해보면 다음과 같이 정의할수 있습니다
 
-![Untitled](Chapter%203%20%201ad9f/Untitled%2015.png)
+![Untitled](\assets\Math_for_ML_Chapter3\Untitled 15.png)
 
 다음 정방행렬 A columns이 Orthonormal하면  Orthogonal Matrix라고 하고 (3.29)와 (3.30)을 만족하게 됩니다. 
 
