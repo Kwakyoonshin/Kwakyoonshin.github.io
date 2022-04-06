@@ -41,6 +41,10 @@ Norm의 정의(하나 하나 쳐보고 미친 짓이란 걸 깨달았습니다)
 
 ![Untitled 1](\assets\Math_for_ML_Chapter3\Untitled 1.png)
 
+![Untitled 1](\assets\Math_for_ML_Chapter3\Untitled 1.png)
+
+![Untitled 2](\assets\Math_for_ML_Chapter3\Untitled 2.png)
+
 다음 왼쪽의 그래프에 원점으로 부터 Manhattan Norm이 1인 모든 vector의 trace(자취)를 그린 그래프입니다. 오른쪽의 그림이 원점으로 부터 Euclidean Norm이 1인 모든 vector의 trace(자취)를 그린 그래프입니다. 일반적으로 왼쪽의 Euclidean Norm을 많이 사용합니다.
 
 ## Inner Products
